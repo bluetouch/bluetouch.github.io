@@ -1,8 +1,9 @@
 // script.js
-function loadCSS(url) {
+function loadCSS(url, media = 'screen') {
   var link = document.createElement('link');
   link.rel = 'stylesheet';
   link.href = url;
+  link.media = media;
   document.head.appendChild(link);
 }
 
