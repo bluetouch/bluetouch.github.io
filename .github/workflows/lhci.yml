@@ -9,6 +9,6 @@ jobs:
         with:
           node-version: 16
       - run: npm install -g nx && npm install && npm install -g @lhci/cli@0.11.x
-      - run: nx run bluetouch-web:build:production --buildOptimizer=true --namedChunks=true --baseHref=https://bluetouch.mx/
+      - run: nx run bluetouch-web:build:production --buildOptimizer=true --namedChunks=true
       - run: lhci autorun --collect.staticDistDir=./dist/apps/bluetouch-web
 
