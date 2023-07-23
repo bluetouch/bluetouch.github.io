@@ -5,11 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Set GitHub token
-        uses: actions/setup-secrets@v1
-        with:
-          secrets:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Set GitHub token
+#        uses: actions/setup-secrets@v1
+#        with:
+#          secrets:
+#            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-node@v3
         with:
           node-version: 16
