@@ -1,6 +1,6 @@
 ci:
   collect:
-    staticDistDir: './dist/apps/bluetouch-web'
+    staticDistDir: ./dist/apps/bluetouch-web
   assert:
     preset: lighthouse:no-pwa
   upload:
