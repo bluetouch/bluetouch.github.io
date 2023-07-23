@@ -27,7 +27,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
     <div id="message">
       <h1>Blue Touch S.A de C.V.</h1>
       <!-- LinkedIn link with icon -->
-      <a href="https://www.linkedin.com/company/blue-touch/" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.linkedin.com/company/blue-touch/" target="_blank" rel="noopener noreferrer" aria-label="BlueTouch Linkedin Page">
         <i class="fab fa-linkedin"></i>
       </a>
 

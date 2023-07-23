@@ -20,7 +20,7 @@ jobs:
         run: npm install
 
       - name: Build Angular App
-        run: nx run bluetouch-web:build:production --buildOptimizer=true --namedChunks=true
+        run: nx run bluetouch-web:build:production --buildOptimizer=true --namedChunks=true --baseHref=https://bluetouch.mx/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
