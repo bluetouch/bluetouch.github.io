@@ -5,17 +5,19 @@ ci:
       throttlingMethod: ["devtools"]
     numberOfRuns: 1
     staticDistDir: "./dist/apps/bluetouch-web"
-
   budgets:
     - path: "categories.performance"
+      metrics:
+        first-contentful-paint: 100000
+        largest-contentful-paint: 100000
+        first-meaningful-paint: 100000
+        speed-index: 100000
+        interactive: 100000
+        total-blocking-time: 100000
+        cumulative-layout-shift: 100000
   assert:
     preset: "lighthouse:recommended"
     audits:
       metrics: "off"
     assertions:
       categories.pwa: "off"
-      bypass: ["warn", { "minScore": 0 }]
-      is-on-https: ["warn", { "minScore": 0 }]
-      accessibility: ["warn", { "minScore": 0 }]
-      best-practices: ["warn", { "minScore": 0 }]
-      seo: ["warn", { "minScore": 0 }]
