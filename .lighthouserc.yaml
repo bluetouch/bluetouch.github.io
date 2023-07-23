@@ -1,5 +1,9 @@
 ci:
   collect:
+    url: "https://bluetouch.mx"
+    settings:
+      onlyCategories: [ "performance" ]
+    numberOfRuns: 5
     staticDistDir: ./dist/apps/bluetouch-web
   assert:
     preset: lighthouse:no-pwa
