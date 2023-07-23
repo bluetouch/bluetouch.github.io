@@ -4,6 +4,9 @@ ci:
     audits:
       performance:
         enabled: true
+        assertions:
+          - good: 10
+          - excellent: 90
       accessibility:
         enabled: false
       best-practices:
