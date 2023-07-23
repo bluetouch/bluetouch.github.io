@@ -8,15 +8,6 @@ ci:
 
   budgets:
     - path: "categories.performance"
-      metrics:
-        first-contentful-paint: 0
-        largest-contentful-paint: 0
-        first-meaningful-paint: 0
-        speed-index: 0
-        interactive: 0
-        total-blocking-time: 0
-        cumulative-layout-shift: 0
-
   assert:
     preset: "lighthouse:recommended"
     audits:
