@@ -20,16 +20,11 @@ ci:
   assert:
     preset: "lighthouse:recommended"
     audits:
-      'metrics': 'off'
+      metrics: "off"
     assertions:
       categories.pwa: "off"
-      categories:performance: ["warn", { "minScore": 0 }]
       bypass: ["warn", { "minScore": 0 }]
-      offline-start-url: ["warn", { "minScore": 0 }]
-      service-worker: ["warn", { "minScore": 0 }]
-      redirects-http: ["warn", { "minScore": 0 }]
-      render-blocking-resources: ["warn", { "minScore": 0 }]
-      uses-http2: ["warn", { "minScore": 0 }]
-      speed-index: ["warn", { "maxNumericValue": 3000 }]
-      interactive: ["warn", { "minScore": 0 }]
-      performance-budget: ["warn", { "minScore": 0 }]
+      is-on-https: ["warn", { "minScore": 0 }]
+      accessibility: ["warn", { "minScore": 0 }]
+      best-practices: ["warn", { "minScore": 0 }]
+      seo: ["warn", { "minScore": 0 }]
