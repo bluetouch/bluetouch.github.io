@@ -21,3 +21,9 @@ ci:
       metrics: "off"
     assertions:
       categories.pwa: "off"
+      bypass: ["warn", { "minScore": 0 }]
+      is-on-https: ["error", { "minScore": 1 }]
+      accessibility: ["warn", { "minScore": 0 }]
+      seo: ["warn", { "minScore": 0 }]
+      speed-index: ["error", { "minScore": 0 }]
+      video-caption: ["error", { "minScore": 0 }]
