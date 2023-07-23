@@ -1,0 +1,11 @@
+ci:
+  collect:
+    # collect options here
+  assert:
+    preset: lighthouse:no-pwa
+  upload:
+    # upload options here
+  server:
+    # server options here
+  wizard:
+    # wizard options here
