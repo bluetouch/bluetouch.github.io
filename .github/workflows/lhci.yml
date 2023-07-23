@@ -1,5 +1,5 @@
 name: lhci
-on: [ push ]
+on: [push]
 
 jobs:
   lighthouseci:
@@ -22,4 +22,4 @@ jobs:
 
       - run: nx run bluetouch-web:build:production --buildOptimizer=true --namedChunks=true
 
-      - run: lhci autorun --collect.staticDistDir=./dist/apps/bluetouch-web --upload.target=temporary-public-storage --token ${{ secrets.GITHUB_TOKEN }}
+      - run: lhci autorun --upload.target=temporary-public-storage --token "${{ secrets.GITHUB_TOKEN }}"
