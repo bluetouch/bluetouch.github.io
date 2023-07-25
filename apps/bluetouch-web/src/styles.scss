@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+#message a:hover { text-decoration: underline; /* Add underline on hover */ }
+@media (max-width: 600px) {
+  body, #message { margin-top: 0; background: white; box-shadow: none; }
+  body { border-top: 16px solid #ffa100; }
+}

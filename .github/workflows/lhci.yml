@@ -1,0 +1,30 @@
+#name: Lighthouse CI
+#on: push
+#jobs:
+#  lighthouse:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v3
+#      - name: Audit URLs using Lighthouse
+#        uses: treosh/lighthouse-ci-action@v10
+#        with:
+#          urls: |
+#            https://bluetouch.mx/
+#          budgetPath: ./budget.json # test performance budgets
+#          uploadArtifacts: true # save results as an action artifacts
+#          temporaryPublicStorage: true # upload lighthouse report to the temporary storage
+#name: lhci
+#on: [push]
+#
+#jobs:
+#  lighthouseci:
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - uses: actions/checkout@v3
+#      - uses: actions/setup-node@v3
+#        with:
+#          node-version: 16
+#      - run: npm install -g nx && npm install && npm install -g @lhci/cli@0.12.0
+#      - run: nx run bluetouch-web:build:production --buildOptimizer=true --namedChunks=true
+#      - run: lhci autorun --upload.target=temporary-public-storage --token ${{ secrets.GH_TOKEN }}

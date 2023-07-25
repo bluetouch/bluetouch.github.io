@@ -1,0 +1,26 @@
+ci:
+  collect:
+    staticDistDir: "./dist/apps/bluetouch-web"
+    audits:
+      performance:
+        enabled: true
+        assertions:
+          - good: 10
+          - excellent: 90
+      accessibility:
+        enabled: false
+      best-practices:
+        enabled: false
+      seo:
+        enabled: false
+      internationalization:
+        enabled: false
+      progressive-web-apps:
+        enabled: false
+  assert:
+    thresholds:
+      performance:
+        good: 10
+        excellent: 90
+  upload:
+    target: 'temporary-public-storage'
