@@ -23,6 +23,11 @@ import { Component, ViewEncapsulation } from '@angular/core';
       #message a {
         text-decoration: none
       }
+
+      .fa-linkedin {
+        padding-right: 1em;
+      }
+
     </style>
     <div id="message">
       <h1>Blue Touch S.A de C.V.</h1>
