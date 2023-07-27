@@ -30,6 +30,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+          cache: 'npm'
+          cache-dependency-path: ./package-lock.json
       - run: npm install -g nx && npm install
       - run: nx run bluetouch-web:build:production --buildOptimizer=true --namedChunks=true
       # - run: lhci autorun --upload.target=temporary-public-storage --token ${{ secrets.GH_TOKEN }}
