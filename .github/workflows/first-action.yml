@@ -11,5 +11,6 @@ jobs:
         run: echo "Hey"
 
       - name: Print Farewell
-        run: echo "bye-bye"
-
+        run: |
+          echo "bye"
+          echo "-bye"
