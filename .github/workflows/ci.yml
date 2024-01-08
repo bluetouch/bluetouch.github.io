@@ -10,17 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
           cache: 'npm'
           cache-dependency-path: ./package-lock.json
+
       - name: Install Nx CLI
         run: npm install -g nx
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build Angular App
         run: nx run bluetouch-web:build:production --buildOptimizer=true --namedChunks=true
@@ -30,6 +31,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist/apps/bluetouch-web # Replace "bluetouch-web" with the name of your Angular project
-
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
